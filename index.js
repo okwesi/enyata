@@ -31,7 +31,8 @@ const options = {
 };
 
 const swaggerDocs = swaggerJsdoc(options);
-app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
+app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+app.get('/', swaggerUI.setup(swaggerDocs))
 
 
 app.listen(port, () => {
