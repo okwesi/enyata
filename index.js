@@ -37,3 +37,5 @@ app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 app.listen(port, () => {
   console.log(`Server Running on Port ${port}`)
 })
+
+module.exports = app;
